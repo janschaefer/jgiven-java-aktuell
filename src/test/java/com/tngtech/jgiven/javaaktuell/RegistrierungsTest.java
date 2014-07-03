@@ -30,7 +30,7 @@ public class RegistrierungsTest extends
         	.und().als_Email_ist_$_angegeben(email)
         	.und().ein_valides_Passwort_ist_angegeben();
         wenn().der_Kunde_auf_den_Registrieren_Knopf_drückt();
-        dann().wird_die_Registrierung_mit_der_Fehlermeldung_$_abgelehnt( "Ungültige Email-Addresse" )
+        dann().wird_die_Registrierung_mit_der_Fehlermeldung_$_abgelehnt( "Ungültige Emailaddresse" )
             .und().der_Kunde_ist_nicht_registriert();
     }
 }
