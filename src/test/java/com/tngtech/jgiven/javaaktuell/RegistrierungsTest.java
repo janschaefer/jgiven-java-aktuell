@@ -25,7 +25,7 @@ public class RegistrierungsTest extends
     @Test
     @Story( "ABC-1" )
     @DataProvider( { "abc.com", "ungültig", "1234" } )
-    public void Kunden_können_sich_nur_mit_valider_Email_Addresse_registrieren( String email ) throws Exception {
+    public void Kunden_können_sich_nur_mit_valider_Emailadresse_registrieren( String email ) throws Exception {
         gegeben().die_Registrierungsseite_ist_geöffnet()
             .und().als_Email_ist_$_angegeben( email )
             .und().ein_valides_Passwort_ist_angegeben();
