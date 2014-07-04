@@ -9,7 +9,7 @@ import com.tngtech.jgiven.junit.de.SzenarioTest;
 
 @RunWith( DataProviderRunner.class )
 public class RegistrierungsTest extends
-        SzenarioTest<GegebenRegistrierungsSeite, WennRegistrierungsSeite, DannRegistrierungsSeite> {
+        SzenarioTest<GegebenRegistrierungsSeite<?>, WennRegistrierungsSeite<?>, DannRegistrierungsSeite<?>> {
 
     @Test
     @Story( "ABC-1" )
