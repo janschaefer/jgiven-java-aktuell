@@ -6,12 +6,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jgiven.version>0.5.3</jgiven.version>
   </properties>
   <dependencies>
     <dependency>
       <groupId>com.tngtech.jgiven</groupId>
       <artifactId>jgiven-junit</artifactId>
-      <version>0.4.0</version>
+      <version>${jgiven.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -53,7 +54,7 @@
       <plugin>
         <groupId>com.tngtech.jgiven</groupId>
         <artifactId>jgiven-maven-plugin</artifactId>
-        <version>0.4.0</version>
+        <version>${jgiven.version}</version>
         <executions>
           <execution>
             <goals>
