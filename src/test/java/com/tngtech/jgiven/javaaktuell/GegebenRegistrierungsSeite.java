@@ -8,10 +8,10 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import com.tngtech.jgiven.annotation.AfterScenario;
 import com.tngtech.jgiven.annotation.ProvidedScenarioState;
-import com.tngtech.jgiven.lang.de.Schritte;
+import com.tngtech.jgiven.lang.de.Stufe;
 
 public class GegebenRegistrierungsSeite<SELF extends GegebenRegistrierungsSeite<?>> extends
-        Schritte<SELF> {
+        Stufe<SELF> {
     @ProvidedScenarioState
     WebDriver webDriver = new HtmlUnitDriver( true );
 

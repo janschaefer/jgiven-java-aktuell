@@ -1,3 +1,5 @@
 /jgiven-reports
 /target
 /.settings
+/.idea
+/*.iml

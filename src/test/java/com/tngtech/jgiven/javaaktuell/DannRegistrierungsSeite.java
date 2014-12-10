@@ -1,14 +1,14 @@
 package com.tngtech.jgiven.javaaktuell;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.tngtech.jgiven.annotation.ExpectedScenarioState;
-import com.tngtech.jgiven.lang.de.Schritte;
+import com.tngtech.jgiven.lang.de.Stufe;
 
-public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> extends Schritte<SELF> {
+public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> extends Stufe<SELF> {
     @ExpectedScenarioState
     WebDriver webDriver;
 
