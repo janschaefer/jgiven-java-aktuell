@@ -1,17 +1,14 @@
 package com.tngtech.jgiven.javaaktuell;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
 import com.tngtech.jgiven.annotation.ExpectedScenarioState;
 import com.tngtech.jgiven.lang.de.Stufe;
 
 public class WennRegistrierungsSeite<SELF extends WennRegistrierungsSeite<?>> extends Stufe<SELF> {
     @ExpectedScenarioState
-    WebDriver webDriver;
+    RegistrierungsSeite registrierungsSeite;
 
     public SELF der_Kunde_auf_den_Registrieren_Knopf_drückt() {
-        webDriver.findElement( By.id( "registrierenButton" ) ).click();
+        registrierungsSeite.registrierenButton.click();
         return self();
     }
 }

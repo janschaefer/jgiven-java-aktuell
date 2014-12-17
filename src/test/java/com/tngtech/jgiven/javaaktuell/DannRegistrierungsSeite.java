@@ -2,7 +2,6 @@ package com.tngtech.jgiven.javaaktuell;
 
 import static org.assertj.core.api.Assertions.*;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.tngtech.jgiven.annotation.ExpectedScenarioState;
@@ -11,6 +10,9 @@ import com.tngtech.jgiven.lang.de.Stufe;
 public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> extends Stufe<SELF> {
     @ExpectedScenarioState
     WebDriver webDriver;
+
+    @ExpectedScenarioState
+    RegistrierungsSeite registrierungsSeite;
 
     @ExpectedScenarioState
     String email;
@@ -25,7 +27,8 @@ public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> ex
 
     public SELF wird_die_Registrierung_mit_der_Fehlermeldung_$_abgelehnt(
             String fehlerMeldung ) {
-        assertThat( webDriver.findElement( By.id( "fehlerMeldung" ) ).getText() )
+
+        assertThat( registrierungsSeite.fehlerMeldung.getText() )
             .isEqualTo( fehlerMeldung );
         return self();
     }

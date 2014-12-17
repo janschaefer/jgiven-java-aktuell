@@ -2,11 +2,12 @@ package com.tngtech.jgiven.javaaktuell;
 
 import java.io.File;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import com.tngtech.jgiven.annotation.AfterScenario;
+import com.tngtech.jgiven.annotation.BeforeStage;
 import com.tngtech.jgiven.annotation.ProvidedScenarioState;
 import com.tngtech.jgiven.lang.de.Stufe;
 
@@ -21,6 +22,14 @@ public class GegebenRegistrierungsSeite<SELF extends GegebenRegistrierungsSeite<
     @ProvidedScenarioState
     String passwort = "Passwort1234!$";
 
+    @ProvidedScenarioState
+    RegistrierungsSeite registrierungsSeite;
+
+    @BeforeStage
+    public void setupPage() {
+        registrierungsSeite = PageFactory.initElements( webDriver, RegistrierungsSeite.class );
+    }
+
     public SELF die_Registrierungsseite_ist_geöffnet()
             throws Exception {
         File file = new File( "src/main/resources/webshop/registrierung.html" );
@@ -29,19 +38,17 @@ public class GegebenRegistrierungsSeite<SELF extends GegebenRegistrierungsSeite<
     }
 
     public SELF eine_valide_Email_ist_angegeben() {
-        webDriver.findElement( By.id( "emailInput" ) ).sendKeys( email );
-        return self();
-
+        return als_Email_ist_$_angegeben( email );
     }
 
     public SELF ein_valides_Passwort_ist_angegeben() {
-        webDriver.findElement( By.id( "passwortInput" ) ).sendKeys( passwort );
+        registrierungsSeite.passwortInput.sendKeys( passwort );
         return self();
     }
 
     public SELF als_Email_ist_$_angegeben( String email ) {
         this.email = email;
-        webDriver.findElement( By.id( "emailInput" ) ).sendKeys( email );
+        registrierungsSeite.emailInput.sendKeys( email );
         return self();
     }
 
