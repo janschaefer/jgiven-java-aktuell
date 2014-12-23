@@ -26,7 +26,7 @@ public class GegebenRegistrierungsSeite<SELF extends GegebenRegistrierungsSeite<
     RegistrierungsSeite registrierungsSeite;
 
     @BeforeStage
-    public void setupPage() {
+    protected void setupPage() {
         registrierungsSeite = PageFactory.initElements( webDriver, RegistrierungsSeite.class );
     }
 

@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.*;
 import org.openqa.selenium.WebDriver;
 
 import com.tngtech.jgiven.annotation.ExpectedScenarioState;
+import com.tngtech.jgiven.annotation.NotImplementedYet;
 import com.tngtech.jgiven.lang.de.Stufe;
 
 public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> extends Stufe<SELF> {
@@ -38,6 +39,7 @@ public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> ex
         return self();
     }
 
+    @NotImplementedYet
     public SELF der_Kunde_erhält_eine_Bestätigungsemail() {
         // entsprechend implementieren
         return self();
