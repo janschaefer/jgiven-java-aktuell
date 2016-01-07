@@ -1,6 +1,6 @@
 package com.tngtech.jgiven.javaaktuell;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.openqa.selenium.WebDriver;
 
@@ -31,6 +31,11 @@ public class DannRegistrierungsSeite<SELF extends DannRegistrierungsSeite<?>> ex
 
         assertThat( registrierungsSeite.fehlerMeldung.getText() )
             .isEqualTo( fehlerMeldung );
+        return self();
+    }
+
+    public SELF lambdaTest( int x ) {
+        new Thread( () -> { System.out.println(); } );
         return self();
     }
 

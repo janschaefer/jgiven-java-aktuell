@@ -12,6 +12,11 @@ public class RegistrierungsTest extends
         SzenarioTest<GegebenRegistrierungsSeite<?>, WennRegistrierungsSeite<?>, DannRegistrierungsSeite<?>> {
 
     @Test
+    public void foo() {
+        dann().lambdaTest( 5 );
+    }
+
+    @Test
     @Story( "ABC-1" )
     public void Kunden_können_sich_registrieren() throws Exception {
         gegeben().die_Registrierungsseite_ist_geöffnet()
